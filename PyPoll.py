@@ -9,8 +9,10 @@ file_to_save = os.path.join("analysis", "election_analysis.txt")
 # Initialize a total vote counter.
 total_votes = 0
 
-# Candidate Options
+# Candidate options and candidate votes
 candidate_options = []
+# 1. Declare the empty dictionary.
+candidate_votes = {}
 
 # Open the election results and read the file.
 with open(file_to_load) as election_data:
