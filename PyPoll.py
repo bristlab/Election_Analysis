@@ -19,7 +19,7 @@ with open(file_to_load) as election_data:
     # Read the header row.
     headers = next(file_reader)
 
-    # Print each row in the CSV file.
+# Print each row in the CSV file.
     for row in file_reader:
         # Add to the total vote count.
         total_votes += 1
@@ -27,8 +27,10 @@ with open(file_to_load) as election_data:
         # Print the candidate name from each row.
         candidate_name = row[2]
 
-        # Add the candidate name to the candidate list.
-        candidate_options.append(candidate_name)
+        # If the candidate does not match any existing candidate...
+        if candidate_name not in candidate_options:
+            # Add it to the list of candidates.
+            candidate_options.append(candidate_name)
 
 # Print the candidate list.
 print(candidate_options)
