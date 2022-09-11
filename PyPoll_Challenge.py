@@ -101,13 +101,13 @@ with open(file_to_save, "w") as txt_file:
     for county in county_names:
 
         # 6b: Retrieve the county vote count.
-        
+        county_votes = votes_per_county[county]
 
         # 6c: Calculate the percentage of votes for the county.
-
+        county_percentage = county_votes / total_votes
 
          # 6d: Print the county results to the terminal.
-
+        print(f"total votes for {county} county: {county_votes} ({county_percentage})")
          # 6e: Save the county votes to a text file.
 
          # 6f: Write an if statement to determine the winning county and get its vote count.
