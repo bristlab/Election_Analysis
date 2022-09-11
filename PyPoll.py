@@ -30,12 +30,12 @@ with open(file_to_load) as election_data:
         candidate_name = row[2]
 
         if candidate_name not in candidate_options:
-
-           # Add the candidate name to the candidate list.
+          # Add the candidate name to the candidate list.
             candidate_options.append(candidate_name)
 
            # 2. Begin tracking that candidate's vote count.
             candidate_votes[candidate_name] = 0
+
 
 # Print the candidate vote dictionary.
 print(candidate_votes)
