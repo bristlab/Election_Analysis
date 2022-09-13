@@ -91,8 +91,10 @@ We've been tasked with auditing the tabulated results of a U.S. congressional pr
 
 ## Summary
 
-This script doesn't need any modification to operate with other election data with different precincts, candidates, etcetera. However, there are two points to consider if you wish to utilize this script using different datasets.
+This script doesn't need any modification to operate with other election data with different precincts, candidates, etc., as long as the data is formatted the same as `election_results.csv`. However, if your dataset is formatted differently, there are a couple points to consider if you wish to utilize this script using a custom dataset.
 
 1. If the dataset provided has a different column order, then the script would need to be adapted to match. Our two most important columns are defined with `county_name = row[1]` and `candidate_name = row[2]`.
 
 2. Keep in mind that this script automatically skips over the first row because we assume that our dataset's top row is used to define column names. If the new dataset does not include a header row, then we should remove the `header = next(reader)` line to ensure that we aren't skipping it.
+
+If end users deem it necessary, they may also decide to expand the script to provide enhanced reports that calculate how many votes each candidate recieves in each county.
