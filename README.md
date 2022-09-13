@@ -91,6 +91,38 @@ We've been tasked with auditing the tabulated results of a U.S. congressional pr
 
 ## Summary
 
+Here is our terminal output when running the entire script:
+
+	Election Results
+	-------------------------
+	Total Votes: 369,711
+	-------------------------
+
+
+	County Votes:
+
+	Jefferson: 10.5% (38,855)
+	Denver: 82.8% (306,055)
+	Arapahoe: 6.7% (24,801)
+
+	-------------------------
+	Largest County Turnout: Denver
+	-------------------------
+
+	Votes Per Candidate:
+	-------------------------
+	Charles Casper Stockham: 23.0% (85,213)
+	Diana DeGette: 73.8% (272,892)
+	Raymon Anthony Doane: 3.1% (11,606)
+
+
+	Winning Candidate Summary
+	-------------------------
+	Winner: Diana DeGette
+	Winning Vote Count: 272,892
+	Winning Percentage: 73.8%
+	-------------------------
+
 This script doesn't need any modification to operate with other election data with different precincts, candidates, etc., as long as the data is formatted the same as `election_results.csv`. However, if your dataset is formatted differently, there are a couple points to consider if you wish to utilize this script using a custom dataset.
 
 1. If the dataset provided has a different column order, then the script would need to be adapted to match. Our two most important columns are defined with `county_name = row[1]` and `candidate_name = row[2]`.
